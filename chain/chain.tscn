@@ -18,14 +18,23 @@ offset = Vector2(-16, 5)
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 360)
 
-[node name="tip" type="CharacterBody2D" parent="."]
+[node name="tip" type="CharacterBody2D" parent="." groups=["hook"]]
 collision_layer = 4
 
 [node name="hook" type="Sprite2D" parent="tip"]
 texture = ExtResource("3_ee3vh")
 offset = Vector2(0, 8)
 
-[node name="collision_shape" type="CollisionShape2D" parent="tip"]
+[node name="collision_shape" type="CollisionShape2D" parent="tip" groups=["hook"]]
 position = Vector2(0, 3)
 scale = Vector2(0.25, 0.25)
+shape = SubResource("CircleShape2D_8ub1f")
+
+[node name="Area2D" type="Area2D" parent="tip"]
+collision_layer = 4
+collision_mask = 121
+
+[node name="collision_shape" type="CollisionShape2D" parent="tip/Area2D" groups=["hook"]]
+position = Vector2(0, 6)
+scale = Vector2(1.1025, 1.2625)
 shape = SubResource("CircleShape2D_8ub1f")

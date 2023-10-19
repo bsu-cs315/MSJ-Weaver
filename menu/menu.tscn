@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfmqttinc87v0"]
+
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_3h88a"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3h88a")
+
+[node name="margin_container" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 487.0
+offset_right = 570.0
+offset_bottom = 553.0
+
+[node name="vbox" type="VBoxContainer" parent="margin_container"]
+layout_mode = 2
+
+[node name="play" type="Button" parent="margin_container/vbox"]
+layout_mode = 2
+text = "Play"
+
+[node name="quit" type="Button" parent="margin_container/vbox"]
+layout_mode = 2
+text = "Quit"
+
+[node name="title_1" type="Sprite2D" parent="."]
+
+[node name="title_2" type="Sprite2D" parent="."]
+
+[node name="title_3" type="Sprite2D" parent="."]
+
+[connection signal="pressed" from="margin_container/vbox/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="margin_container/vbox/quit" to="." method="_on_quit_pressed"]

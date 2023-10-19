@@ -1,39 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhru52rwd514f"]
+[gd_scene load_steps=6 format=3 uid="uid://ha6p078p16nn"]
 
-[ext_resource type="Script" path="res://frogs/frog_4.gd" id="1_kb0re"]
+[ext_resource type="Script" path="res://frogs/frog_5.gd" id="1_nfhls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3x84"]
+size = Vector2(37, 78)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ld620"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pnwxd"]
 noise = SubResource("FastNoiseLite_ld620")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_walql"]
-size = Vector2(20, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40wp3"]
 
-[node name="frog4" type="CharacterBody2D"]
+[node name="frog5" type="CharacterBody2D"]
 collision_layer = 64
-script = ExtResource("1_kb0re")
+script = ExtResource("1_nfhls")
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
+position = Vector2(0.5, -12.5)
 scale = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_u3x84")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -10)
-scale = Vector2(0.04, 0.02)
+position = Vector2(0.500001, -12.5)
+scale = Vector2(0.0722656, 0.0761719)
 texture = SubResource("NoiseTexture2D_pnwxd")
 
 [node name="Area2D" type="Area2D" parent="." groups=["frog"]]
-position = Vector2(0, 1)
-scale = Vector2(1.08507, 1.08)
+position = Vector2(-1.19209e-07, 9)
+scale = Vector2(2.088, 2.12663)
 collision_layer = 64
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -10)
-shape = SubResource("RectangleShape2D_walql")
+shape = SubResource("RectangleShape2D_40wp3")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

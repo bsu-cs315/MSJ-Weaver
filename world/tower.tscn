@@ -14,12 +14,18 @@ script = ExtResource("1_e2bif")
 
 [node name="frogs" type="Node" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="static_body" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="collision" type="CollisionShape2D" parent="static_body"]
 scale = Vector2(2.66984, 8.89473)
 shape = SubResource("CapsuleShape2D_dflah")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="sprite" type="Sprite2D" parent="static_body"]
 scale = Vector2(0.161498, 0.52437)
 texture = SubResource("NoiseTexture2D_mpo86")
+
+[node name="frog_counter_label" type="Label" parent="."]
+offset_left = 50.0
+offset_right = 90.0
+offset_bottom = 26.0
+text = "100"

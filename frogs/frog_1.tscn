@@ -11,7 +11,7 @@ noise = SubResource("FastNoiseLite_socot")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_si1pe"]
 
-[node name="frog1" type="CharacterBody2D"]
+[node name="frog1" type="CharacterBody2D" groups=["frog"]]
 collision_layer = 8
 script = ExtResource("1_kfv72")
 
@@ -23,8 +23,9 @@ scale = Vector2(0.0383972, 0.0424194)
 texture = SubResource("NoiseTexture2D_phkul")
 
 [node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.04, 1.08)
 collision_layer = 8
-collision_mask = 3
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(1, 1.08)

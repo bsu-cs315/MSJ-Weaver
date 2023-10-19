@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const JUMP_FORCE = 800			
-const MOVE_SPEED = 300			
+const MOVE_SPEED = 30			
 const GRAVITY = 50				
 const MAX_SPEED = 2000			
 const FRICTION_AIR = 0.95		
@@ -13,7 +13,9 @@ const CHAIN_PULL = 105
 var chain_velocity := Vector2(0,0)
 var can_jump = false		
 
-
+func game_over():
+		get_tree().change_scene_to_file("res://world/world.tscn")
+		
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
@@ -30,7 +32,7 @@ func _physics_process(_delta: float) -> void:
 	var walk = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) * MOVE_SPEED
 	
 	velocity.y += GRAVITY
-
+		
 	
 	if $chain.hooked:
 	
