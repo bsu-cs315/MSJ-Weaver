@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw5x3tpeob0po"]
+
+[ext_resource type="Script" path="res://baby/baby.gd" id="1_osoh2"]
+[ext_resource type="Texture2D" uid="uid://s2pj7a148wlt" path="res://icon.svg" id="2_fjtek"]
+[ext_resource type="PackedScene" uid="uid://dov6cn4exec2m" path="res://chain/chain.tscn" id="3_kxn3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwjox"]
+
+[node name="baby" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_osoh2")
+
+[node name="camera" type="Camera2D" parent="."]
+
+[node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_fjtek")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gwjox")
+
+[node name="chain" parent="." instance=ExtResource("3_kxn3x")]
