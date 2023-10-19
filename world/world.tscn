@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgyo1y1jjocr4"]
+[gd_scene load_steps=10 format=3 uid="uid://cgyo1y1jjocr4"]
 
 [ext_resource type="PackedScene" uid="uid://bw5x3tpeob0po" path="res://baby/baby.tscn" id="1_nce3e"]
 [ext_resource type="Texture2D" uid="uid://bxua6mamxaydo" path="res://world/dirt_tile1.png" id="2_2e1bt"]
 [ext_resource type="Texture2D" uid="uid://1j2ivw1yaqwc" path="res://world/dirt_tile2.png" id="3_ubsmv"]
 [ext_resource type="PackedScene" uid="uid://2l0qths8y6sm" path="res://world/tower.tscn" id="4_abrrc"]
+[ext_resource type="Texture2D" uid="uid://bpca24h2liui6" path="res://world/background.png" id="5_y7dgn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3xyun"]
 
@@ -42,3 +43,9 @@ layer_0/tile_data = PackedInt32Array(1245216, 0, 0, 1245217, 0, 0, 1245218, 1, 0
 
 [node name="tower" parent="." instance=ExtResource("4_abrrc")]
 position = Vector2(-869, 472)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -90
+position = Vector2(970, 321)
+scale = Vector2(6, 6)
+texture = ExtResource("5_y7dgn")

@@ -1,14 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ha6p078p16nn"]
+[gd_scene load_steps=5 format=3 uid="uid://ha6p078p16nn"]
 
 [ext_resource type="Script" path="res://frogs/frog_5.gd" id="1_nfhls"]
+[ext_resource type="Texture2D" uid="uid://bae8uxoo72l0o" path="res://frogs/frog_alt.png" id="2_tgboo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3x84"]
 size = Vector2(37, 78)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_ld620"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pnwxd"]
-noise = SubResource("FastNoiseLite_ld620")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40wp3"]
 
@@ -22,9 +18,9 @@ scale = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_u3x84")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(0.500001, -12.5)
-scale = Vector2(0.0722656, 0.0761719)
-texture = SubResource("NoiseTexture2D_pnwxd")
+position = Vector2(1, -12.5)
+scale = Vector2(1.25, 1.319)
+texture = ExtResource("2_tgboo")
 
 [node name="Area2D" type="Area2D" parent="." groups=["frog"]]
 position = Vector2(-1.19209e-07, 9)

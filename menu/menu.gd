@@ -2,13 +2,13 @@ extends Control
 
 func _ready():
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property($TitleTextGods, "position", Vector2(900, 250), 1)
+	tween.tween_property($title_1, "position", Vector2(800, 100), 1)
 	
 	var tween2 = get_tree().create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
-	tween2.tween_property($TitleTextGreen, "position", Vector2(940, 500), 1)
+	tween2.tween_property($title_2, "position", Vector2(840, 300), 1)
 	
 	var tween3 = get_tree().create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
-	tween3.tween_property($TitleTextEarths, "position", Vector2(1050, 700), 1)
+	tween3.tween_property($title_3, "position", Vector2(950, 500), 1)
 	
 
 	

@@ -1,13 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://2l0qths8y6sm"]
+[gd_scene load_steps=4 format=3 uid="uid://2l0qths8y6sm"]
 
 [ext_resource type="Script" path="res://world/tower.gd" id="1_e2bif"]
+[ext_resource type="Texture2D" uid="uid://bw17t7ji1432" path="res://world/tower.png" id="2_vvlg6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dflah"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_p46vt"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mpo86"]
-noise = SubResource("FastNoiseLite_p46vt")
 
 [node name="tower" type="Node2D"]
 script = ExtResource("1_e2bif")
@@ -21,8 +17,8 @@ scale = Vector2(2.66984, 8.89473)
 shape = SubResource("CapsuleShape2D_dflah")
 
 [node name="sprite" type="Sprite2D" parent="static_body"]
-scale = Vector2(0.161498, 0.52437)
-texture = SubResource("NoiseTexture2D_mpo86")
+scale = Vector2(2.4, 4.2)
+texture = ExtResource("2_vvlg6")
 
 [node name="frog_counter_label" type="Label" parent="."]
 offset_left = 50.0

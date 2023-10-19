@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw5x3tpeob0po"]
+[gd_scene load_steps=6 format=3 uid="uid://bw5x3tpeob0po"]
 
 [ext_resource type="Script" path="res://baby/baby.gd" id="1_osoh2"]
-[ext_resource type="Texture2D" uid="uid://s2pj7a148wlt" path="res://icon.svg" id="2_fjtek"]
+[ext_resource type="Texture2D" uid="uid://dmjbcs4dvlve7" path="res://baby/baby_player.png" id="2_ir3cy"]
+[ext_resource type="Script" path="res://baby/camera.gd" id="2_sa0nu"]
 [ext_resource type="PackedScene" uid="uid://dov6cn4exec2m" path="res://chain/chain.tscn" id="3_kxn3x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwjox"]
@@ -12,10 +13,10 @@ collision_mask = 121
 script = ExtResource("1_osoh2")
 
 [node name="camera" type="Camera2D" parent="."]
+script = ExtResource("2_sa0nu")
 
 [node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_fjtek")
+texture = ExtResource("2_ir3cy")
 
 [node name="collision_shape" type="CollisionShape2D" parent="." groups=["player"]]
 shape = SubResource("RectangleShape2D_gwjox")
