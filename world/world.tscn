@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://1j2ivw1yaqwc" path="res://world/dirt_tile2.png" id="3_ubsmv"]
 [ext_resource type="PackedScene" uid="uid://2l0qths8y6sm" path="res://world/tower.tscn" id="4_abrrc"]
 [ext_resource type="Texture2D" uid="uid://bpca24h2liui6" path="res://world/background.png" id="5_y7dgn"]
-[ext_resource type="AudioStream" uid="uid://hse2nm0nrl5o" path="res://bgmusic.wav" id="6_33pyk"]
+[ext_resource type="AudioStream" uid="uid://dkjykueyl2fen" path="res://bgmusic.ogg" id="6_j3sp1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3xyun"]
 
@@ -52,5 +52,5 @@ scale = Vector2(6, 6)
 texture = ExtResource("5_y7dgn")
 
 [node name="bgmusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_33pyk")
+stream = ExtResource("6_j3sp1")
 autoplay = true
