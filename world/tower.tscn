@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://2l0qths8y6sm"]
+
+[ext_resource type="Script" path="res://world/tower.gd" id="1_e2bif"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dflah"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_p46vt"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mpo86"]
+noise = SubResource("FastNoiseLite_p46vt")
+
+[node name="tower" type="Node2D"]
+script = ExtResource("1_e2bif")
+
+[node name="frogs" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(2.66984, 8.89473)
+shape = SubResource("CapsuleShape2D_dflah")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.161498, 0.52437)
+texture = SubResource("NoiseTexture2D_mpo86")

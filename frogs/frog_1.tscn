@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c55kb3kb7xssd"]
+
+[ext_resource type="Script" path="res://frogs/frog_1.gd" id="1_kfv72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3x84"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_socot"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_phkul"]
+noise = SubResource("FastNoiseLite_socot")
+
+[node name="frog1" type="CharacterBody2D"]
+script = ExtResource("1_kfv72")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u3x84")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0383972, 0.0424194)
+texture = SubResource("NoiseTexture2D_phkul")
