@@ -5,7 +5,6 @@ var direction := Vector2(0,0)
 var tip := Vector2(0,0)
 
 
-
 const SPEED = 50
 
 var flying = false
@@ -22,7 +21,6 @@ func release() -> void:
 	tip = self.global_position		
 	flying = false	
 	hooked = false	
-	
 
 
 func _process(_delta: float) -> void:
@@ -44,7 +42,3 @@ func _physics_process(_delta: float) -> void:
 			hooked = true
 			flying = false
 	tip = $tip.global_position
-
-
-
-

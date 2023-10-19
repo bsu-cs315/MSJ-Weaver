@@ -29,4 +29,6 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
 		body.game_over() 
 	if body.is_in_group("hook"):
+		$death.play()
+		await get_tree().create_timer(.1).timeout
 		queue_free()

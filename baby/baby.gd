@@ -8,8 +8,6 @@ const FRICTION_AIR = 0.95
 const FRICTION_GROUND = 0.85	
 const CHAIN_PULL = 105
 
-
-
 var chain_velocity := Vector2(0,0)
 var can_jump = false		
 
@@ -19,7 +17,7 @@ func game_over():
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
-		
+			$grapple_shot.play()
 			$chain.shoot(event.position - get_viewport().size * 0.5)
 
 		else:
@@ -79,7 +77,9 @@ func _physics_process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump"):
 		if grounded:
+			$jump.play()
 			velocity.y = -JUMP_FORCE	
 		elif can_jump:
+			$jump.play()
 			can_jump = false	
 			velocity.y = -JUMP_FORCE

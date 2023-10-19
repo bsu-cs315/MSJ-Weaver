@@ -11,8 +11,9 @@ func _ready():
 	tween3.tween_property($title_3, "position", Vector2(950, 500), 1)
 	
 
-	
 func _on_play_pressed():
+	$start.play()
+	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://world/world.tscn")
 
 

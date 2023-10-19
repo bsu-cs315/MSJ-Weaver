@@ -1,7 +1,9 @@
 extends Node2D
 
+
 @export var frog_number = 100
 var pressure = 0
+
 
 @export var frog_types : Array[String] = [
 	"res://frogs/frog_1.tscn",
@@ -11,12 +13,12 @@ var pressure = 0
 	"res://frogs/frog_5.tscn"
 ]
 
+
 @onready var _frog_position := self.position + Vector2(60,100)
 @onready var _frogs := $frogs
 
 
 func _ready():
-
 	while frog_number > 0:
 		$frog_counter_label.text = "Demons Left: %d" % ceil(frog_number)
 		var scene_path : String = frog_types.pick_random()
@@ -27,5 +29,10 @@ func _ready():
 		frog_number -= 1
 		pressure +=.01
 	$frog_counter_label.text = "Congrats You Little Monster!!"
+	$start.play()
+	await get_tree().create_timer(0.1).timeout
+	$start.play()
+	await get_tree().create_timer(0.1).timeout
+	$start.play()
 	await get_tree().create_timer(10.0).timeout
 	get_tree().change_scene_to_file("res://menu/menu.tscn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ha6p078p16nn"]
+[gd_scene load_steps=6 format=3 uid="uid://ha6p078p16nn"]
 
 [ext_resource type="Script" path="res://frogs/frog_5.gd" id="1_nfhls"]
 [ext_resource type="Texture2D" uid="uid://bae8uxoo72l0o" path="res://frogs/frog_alt.png" id="2_tgboo"]
+[ext_resource type="AudioStream" uid="uid://d02qigtip7o6y" path="res://frogs/flying_death.wav" id="3_0o61e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3x84"]
 size = Vector2(37, 78)
@@ -31,5 +32,8 @@ collision_mask = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_40wp3")
+
+[node name="flying_death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0o61e")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

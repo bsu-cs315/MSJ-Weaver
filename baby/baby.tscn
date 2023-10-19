@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bw5x3tpeob0po"]
+[gd_scene load_steps=8 format=3 uid="uid://bw5x3tpeob0po"]
 
 [ext_resource type="Script" path="res://baby/baby.gd" id="1_osoh2"]
 [ext_resource type="Texture2D" uid="uid://dmjbcs4dvlve7" path="res://baby/baby_player.png" id="2_ir3cy"]
 [ext_resource type="Script" path="res://baby/camera.gd" id="2_sa0nu"]
 [ext_resource type="PackedScene" uid="uid://dov6cn4exec2m" path="res://chain/chain.tscn" id="3_kxn3x"]
+[ext_resource type="AudioStream" uid="uid://myqnmymalr12" path="res://baby/grapple_shot.wav" id="5_8ud8r"]
+[ext_resource type="AudioStream" uid="uid://devkytul8ogyf" path="res://baby/jump.wav" id="6_rea4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwjox"]
 
@@ -22,3 +24,9 @@ texture = ExtResource("2_ir3cy")
 shape = SubResource("RectangleShape2D_gwjox")
 
 [node name="chain" parent="." instance=ExtResource("3_kxn3x")]
+
+[node name="grapple_shot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8ud8r")
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rea4l")
