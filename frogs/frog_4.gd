@@ -23,3 +23,8 @@ func _physics_process(delta):
 	velocity.x = SPEED
 	velocity.x = SPEED * 2
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body):
+		if body.is_in_group("player"):
+			body.game_over()

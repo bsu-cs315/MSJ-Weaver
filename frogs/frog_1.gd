@@ -23,3 +23,12 @@ func _physics_process(delta):
 	velocity.x = SPEED
 
 	move_and_slide()
+	
+	
+
+
+func _on_area_2d_body_entered(body):
+	print(body)
+	if body.is_in_group("player"):
+		print('hi')
+		
